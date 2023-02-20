@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background-color: rgba(48, 139, 108, 1);
+    background-image: linear-gradient(90deg, rgba(48, 139, 108, 1) 0%, rgba(41, 53, 86, 1) 100%);
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffffdb;
+    overflow-x: hidden;
+}
+.flexbox {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+.header {
+    transition: all 150ms ease-in-out;
+}
+.header.blur-active {
+    z-index: 1;
+    color: black;
+}
+#city-con {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+    margin: 30px auto 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0000004a;
+    border-radius: 4px;
+    user-select: none;
+}
+.city {
+    width: 300px;
+    height: 169px;
+    margin: 10px 10px;
+    transition: all 75ms ease-in-out;
+    box-shadow: 0 0 1px 1px white;
+    position: relative;
+}
+.city-name {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+    top: 35%;
+    user-select: none;
+    pointer-events: none
+}
+.city-name.active {
+    z-index: 0;
+}
+.city img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.city-hover {
+    transform: scale(2);
+    box-shadow: 0 0 3px 3px white;
+    z-index: 1;
+}
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    z-index: -1;
+    transition: all 10 100ms ease-in-out;
+}
+.blur.blur-active {
+    z-index: 1;
+    background-color: #0000008d;
+}
+.gallery-page {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffd3;
+    color: black;
+    /* backdrop-filter: blur(10px); */
+    border-radius: 4px;
+    overflow-y: auto;
+    z-index: 1;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.close-gall-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+.gallery-page-description {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 20px;
+}
+.gallery-page-img {
+    width: 70%;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-top: 130px;
+}
+.description-images {
+    text-align: center;
+    font-size: 26px;
+    margin: 0 20px 20px;
+}
